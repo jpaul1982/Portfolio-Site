@@ -1,0 +1,30 @@
+.contact-form {
+  flex-basis: 39%;
+  color: #ffffff;
+
+  [type="submit"] {
+    border: 1px solid #65d562;
+    padding: 10px 2rem;
+    width: auto;
+    color: #65d562;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    &:hover {
+      background-color: #65d562;
+      color: #ffffff;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #ffffff;
+    background-color: #171718;
+    color: #ffffff;
+    outline: none;
+  }
+}

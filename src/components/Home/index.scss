@@ -1,0 +1,31 @@
+.list-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  flex-direction: column;
+
+  &--left {
+    flex-basis: 50%;
+  }
+  &--right {
+    flex-basis: 45%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    @media (min-width: 768px) {
+      bottom: 50px;
+      left: 50px;
+    }
+  }
+  ul {
+    margin-left: 1rem;
+    li {
+      padding-bottom: 0.75rem;
+      line-height: 1.5em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}

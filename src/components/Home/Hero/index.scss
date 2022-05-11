@@ -1,0 +1,32 @@
+.hero {
+  &--home {
+    min-height: 90vh;
+    justify-content: center;
+  }
+  display: flex;
+  align-items: center;
+  padding-top: 6rem;
+  flex-direction: column;
+
+  &__content {
+    flex-basis: 50%;
+  }
+
+  &--header {
+    font-family: "Scandia", serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 4.768rem;
+  }
+
+  &--sub-header {
+    font: 100 1.953rem/1.2em "Scandia", serif;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding-top: 4rem;
+  }
+}

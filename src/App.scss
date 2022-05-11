@@ -1,0 +1,143 @@
+@import url("https://use.typekit.net/dsg6xei.css");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+:root {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  display: block;
+  $color-white: #ffffff;
+  $color-secondary: #65d562;
+  $color-primary: #5a37da;
+  $color-black: #171718;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Scandia", sans-serif;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 600ms;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.052rem;
+  line-height: 1.2em;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+  line-height: 1.2em;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 18px;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.container {
+  max-width: 1366px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #65d562ff;
+  border: 1px solid #65d562ff;
+  padding: 1rem 2.5rem;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  &:hover {
+    border: 1px solid #65d562ff;
+    background-color: #fff;
+    color: #65d562ff;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.hero {
+  &--home {
+    min-height: 90vh;
+  }
+  display: flex;
+  align-items: center;
+
+  &__content {
+    flex-basis: 50%;
+  }
+
+  &--header {
+    font-family: "Scandia", serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 4.768rem;
+  }
+
+  &--sub-header {
+    font: 100 1.953rem/1.2em "Scandia", serif;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+  }
+}
+
+.section-panel {
+  padding: 4rem 0;
+
+  &--dark {
+    color: #fff;
+    background-color: #171718;
+  }
+}
