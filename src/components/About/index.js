@@ -19,7 +19,7 @@ const About = () => {
               <p>
                 I grew up in the quaint little town of Lindstrom, a bucolic
                 Swedish paradise north of the metro. Aside from web development
-                I have a wide range of interests; art, music, film, reading, and
+                I have a wide range of interests - art, music, film, reading, and
                 Brazilian Jiu Jitsu just to name a few.{" "}
               </p>
               <p>
