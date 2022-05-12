@@ -18,7 +18,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Scandia", sans-serif;
+  font-family: "Scandia", "Trebuchet MS", Helvetica, sans-serif;
   font-size: inherit;
   font-weight: 400;
 }
@@ -122,14 +122,14 @@ small,
   }
 
   &--header {
-    font-family: "Scandia", serif;
+    font-family: "Scandia", "Trebuchet MS", Helvetica, sans-serif;
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-size: 4.768rem;
   }
 
   &--sub-header {
-    font: 100 1.953rem/1.2em "Scandia", serif;
+    font: 100 1.953rem/1.2em "Scandia", "Trebuchet MS", Helvetica, sans-serif;
     margin-bottom: 1rem;
     letter-spacing: 5px;
   }

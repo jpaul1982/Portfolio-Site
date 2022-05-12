@@ -42,7 +42,7 @@ const Contact = () => {
           rows="10"
         ></textarea>
         <label>
-          <input type="submit" value="Submit" />
+          <input className='submit-button' type="submit" value="Submit" />
         </label>
       </form>
     </div>
