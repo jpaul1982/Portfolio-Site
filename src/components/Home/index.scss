@@ -9,12 +9,11 @@
   }
   &--right {
     flex-basis: 45%;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    position: static;
     @media (min-width: 768px) {
       bottom: 50px;
       left: 50px;
+      position: relative;
     }
   }
   ul {
