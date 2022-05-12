@@ -1,8 +1,8 @@
 .list-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  // flex-wrap: wrap;
   padding-top: 4rem;
-  flex-direction: column;
+  // flex-direction: column;
 
   &--left {
     flex-basis: 50%;
@@ -10,6 +10,11 @@
   &--right {
     flex-basis: 100%;
     position: static;
+
+    svg > g > g > g > path {
+      fill: none;
+    }
+
     @media (min-width: 768px) {
       bottom: 50px;
       left: 50px;
@@ -26,6 +31,8 @@
   }
 
   @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
   }
 }
