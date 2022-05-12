@@ -10,7 +10,7 @@
 .slick-arrow {
   &::before,
   &::after {
-    color: #171718 !important;
+    color: var(--color-black) !important;
   }
 }
 
