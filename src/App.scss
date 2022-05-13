@@ -109,31 +109,6 @@ small,
   }
 }
 
-.hero {
-  &--home {
-    min-height: 90vh;
-  }
-  display: flex;
-  align-items: center;
-
-  &__content {
-    flex-basis: 50%;
-  }
-
-  &--header {
-    font-family: "Scandia", "Trebuchet MS", Helvetica, sans-serif;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    font-size: 4.768rem;
-  }
-
-  &--sub-header {
-    font: 100 1.953rem/1.2em "scandia", "Trebuchet MS", Helvetica, sans-serif;
-    margin-bottom: 1rem;
-    letter-spacing: 5px;
-  }
-}
-
 .section-panel {
   padding: 4rem 0;
 
