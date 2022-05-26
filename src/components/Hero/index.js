@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import DesignEl from "./DesignEl";
+// import DesignEl from "./DesignEl";
 import "./index.scss";
 
 const Hero = () => {
