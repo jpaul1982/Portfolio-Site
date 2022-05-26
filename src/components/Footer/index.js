@@ -11,28 +11,45 @@ const Footer = () => {
       <div className="container">
         <div className="footer__wrapper">
           <article className="footer__content">
-            <h2>Reach out - let's talk!</h2>
+            <h4>Reach out - let's talk!</h4>
             <p>
               I’d love to hear your thoughts. Start a partnership by reaching
               out and sharing your ideas.
             </p>
-            <a className="phone-link" href="/">651-338-9319</a>
+            <a className="phone-link" href="/">
+              651-338-9319
+            </a>
             <div className="social-links">
               <ul>
                 <li>
-                  <a target="_blank" href={"//www.linkedin.com/in/paul-molnar-b0993a187"} rel="noreferrer">
-                    <FontAwesomeIcon to="/https://www.linkedin.com/in/paul-molnar-b0993a187/" icon={faLinkedin} color="#5a37da"/>
+                  <a
+                    target="_blank"
+                    href={"//www.linkedin.com/in/paul-molnar-b0993a187"}
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      to="/https://www.linkedin.com/in/paul-molnar-b0993a187/"
+                      icon={faLinkedin}
+                      color="var(--color-primary)"
+                    />
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href={"https://github.com/jpaul1982"} rel="noreferrer">
-                    <FontAwesomeIcon to="https://github.com/jpaul1982" icon={faGithub} color="#5a37da" />
+                  <a
+                    target="_blank"
+                    href={"https://github.com/jpaul1982"}
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      to="https://github.com/jpaul1982"
+                      icon={faGithub}
+                      color="var(--color-primary)"
+                    />
                   </a>
                 </li>
               </ul>
             </div>
           </article>
-
           <Contact />
         </div>
       </div>

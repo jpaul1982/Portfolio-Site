@@ -1,40 +1,25 @@
 import React from "react";
+import IconGrid from "./IconGrid";
 import "./index.scss";
-import { motion } from "framer-motion";
-import Headshot from "../../assets/images/Paul.jpg";
-
 const About = () => {
   return (
-    <motion.div
-      className="about"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.2 } }}
-      exit={{ opacity: 0, transition: { duration: 0.3 } }}
-    >
-      <section>
-        <div className="container">
-          <div className="flex-grid">
-            <div className="flex-grid--left">
-              <h1>A bit about me</h1>
-              <p>
-                I grew up in the quaint little town of Lindstrom, a bucolic
-                Swedish paradise north of the metro. Aside from web development
-                I have a wide range of interests - art, music, film, reading, and
-                Brazilian Jiu Jitsu just to name a few.{" "}
-              </p>
-              <p>
-                The creative process is what truly fuels my excitement. Taking
-                an idea from its conceptual form to a finished product is a thrill 
-                unparalleled.{" "}
-              </p>
-            </div>
-            <div className="flex-grid--right">
-              <img src={Headshot} alt="" />
-            </div>
-          </div>
+    <section id="about">
+      <div className="container">
+        <h2>About Me</h2>
+        <div>
+          <p>
+            Hello! Thank you for visiting my portfolio site. I am a front-end
+            web designer and developer based out of Minnesota. I specialize in
+            creating custom Wordpress sites. When I’m not using Wordpress, I
+            love spending time building out web-based projects utilizing various
+            other technologies - React especially! Additionally, I am proficient
+            in Adobe Photoshop, Illustrator, XD, and tinkering around with After
+            Effects for those Lottie animations.
+          </p>
+          <IconGrid />
         </div>
-      </section>
-    </motion.div>
+      </div>
+    </section>
   );
 };
 

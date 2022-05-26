@@ -1,0 +1,98 @@
+.hero {
+  height: 85vh;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 500px) {
+    height: 100vh;
+    overflow: visible;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/images/logo_white.svg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -65px;
+    left: 56%;
+    width: 255px;
+    height: 100%;
+    transform: rotate(-45deg);
+    opacity: 0.15;
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: 500px) {
+      width: 550px;
+      left: 50%;
+    }
+
+    @media (min-width: 768px) {
+      width: 550px;
+      left: 60%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 991px) {
+      left: 65%;
+      width: 650px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__content {
+    flex-basis: 100%;
+    position: relative;
+  }
+
+  &--header {
+    font: normal 500 105px/1em "Bebas Neue Bold", sans-serif;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: 500px) {
+      font: normal 500 135px/1em "Bebas Neue Bold", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 768px) {
+      font: normal 500 155px/1em "Bebas Neue Bold", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 991px) {
+      font: normal 500 200px/1em "Bebas Neue Bold", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &--sub-header {
+    font: normal 100 30px/1em "Bebas Neue Thin", sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+    color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: 500px) {
+      font: normal 100 60px/1.2em "Bebas Neue Thin", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 768px) {
+      font: normal 100 60px/1.2em "Bebas Neue Thin", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 991px) {
+      font: normal 100 60px/1.2em "Bebas Neue Thin", sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

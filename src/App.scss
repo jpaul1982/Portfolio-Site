@@ -1,6 +1,24 @@
-@import url("https://use.typekit.net/dsg6xei.css");
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: local("Bebas Neue"),
+    url(../src/assets/fonts/BebasNeue/Commercial/OTF/BebasNeue-Bold.otf)
+      format("opentype");
+}
+@font-face {
+  font-family: "Bebas Neue Thin";
+  src: local("Bebas Neue"),
+    url(../src/assets/fonts/BebasNeue/Commercial/OTF/BebasNeue-Thin.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local("Avenir"),
+    url(../src/assets/fonts/avenir_ff/AvenirLTStd-Book.otf) format("opentype");
+}
 
 :root {
   margin: 0;
@@ -10,8 +28,7 @@
   display: block;
 
   --color-white: #ffffff;
-  --color-secondary: #65d562;
-  --color-primary: #5a37da;
+  --color-primary: #65d562;
   --color-black: #171718;
 }
 
@@ -19,29 +36,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Scandia", "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  overflow-x: hidden;
+}
+
+section {
+  margin-bottom: 8rem;
 }
 
 p {
   margin-bottom: 2rem;
   font-size: 20px;
   line-height: 28px;
-}
-
-.page-enter {
-  opacity: 0;
-}
-.page-enter-active {
-  opacity: 1;
-  transition: opacity 400ms;
-  transition-delay: 600ms;
-}
-.page-exit {
-  opacity: 1;
-}
-.page-exit-active {
-  opacity: 0;
-  transition: opacity 400ms;
+  font: normal 100 20px/1.5em "Avenir", sans-serif;
 }
 
 h1,
@@ -49,35 +60,23 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "Bebas Neue", sans-serif;
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
-h1 {
-  font-size: 3.052rem;
-  line-height: 1.2em;
-  margin-bottom: 2rem;
-}
-
 h2 {
-  font-size: 2.441rem;
+  font-size: 60px;
   line-height: 1.2em;
   margin-bottom: 2rem;
-}
 
-h3 {
-  font-size: 1.953rem;
+  @media (min-width: 500px) {
+    font-size: 100px;
+  }
 }
 
 h4 {
-  font-size: 1.563rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-h6 {
-  font-size: 18px;
+  font-size: 50px;
 }
 
 small,
@@ -89,6 +88,17 @@ small,
   max-width: 1366px;
   width: 85%;
   margin: 0 auto;
+  &--hero {
+    width: 100%;
+    margin: 0;
+    padding: 0 6%;
+
+    @media (min-width: 500px) {
+      width: 85%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
 }
 
 .button {
@@ -109,11 +119,7 @@ small,
   }
 }
 
-.section-panel {
-  padding: 4rem 0;
-
-  &--dark {
-    color: #fff;
-    background-color: var(--color-black);
-  }
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
 }

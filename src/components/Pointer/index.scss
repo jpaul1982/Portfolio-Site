@@ -1,0 +1,77 @@
+.pointer {
+  position: fixed;
+  top: 85%;
+  right: 14px;
+  z-index: 1;
+  > p {
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+    font-size: 16px;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+  }
+  > span {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid var(--color-primary);
+    display: block;
+    margin-bottom: 3px;
+    position: relative;
+    left: 10px;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    &:first-of-type {
+      animation-delay: 0.1s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    &:last-of-type {
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  5% {
+    top: 1px;
+  }
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.jump-to-top {
+    position: fixed;
+    top: 85%;
+    right: -10px;
+    z-index: 1;
+    cursor: pointer;
+    p {
+        margin-bottom: 20px;
+        transform: rotate(-90deg);
+        font-size: 16px;
+        position: relative;
+    }
+  span {
+    position: relative;
+    top: 5px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid var(--color-primary);
+  }
+}

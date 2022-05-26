@@ -1,0 +1,36 @@
+.flex-grid--icons {
+  position: relative;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+
+  @media (min-width: 991px) {
+    flex-direction: row;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 65%;
+}
+
+.image-container {
+  max-width: 450px;
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: 991px) {
+    position: absolute;
+    right: -75px;
+    bottom: 0;
+    // max-width: 450px;
+  }
+  @media (min-width: 1330px) {
+    position: absolute;
+    bottom: 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

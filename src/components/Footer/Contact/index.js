@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./index.scss";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -17,34 +18,44 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsSubmitted(true);
         },
         (error) => {
           console.log(error.text);
         }
-      );
-
-    e.target.reset();
+      )
+      .then(() => {
+        e.target.reset();
+      });
   };
   return (
     <div className="contact-form">
-      <form ref={form} onSubmit={sendEmail} action="">
-        <label>
-          <input type="text" placeholder="Name" name="name" />
-        </label>
-        <label>
-          <input type="email" placeholder="Email" name="email" />
-        </label>
-        <textarea
-          name="message"
-          placeholder="Leave a message"
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-        <label>
-          <input className='submit-button' type="submit" value="Submit" />
-        </label>
-      </form>
+      {!isSubmitted ? (
+        <form ref={form} onSubmit={sendEmail} action="">
+          <label>
+            <input type="text" placeholder="Name" name="name" required />
+          </label>
+          <label>
+            <input type="email" placeholder="Email" name="email" required />
+          </label>
+          <textarea
+            name="message"
+            placeholder="Leave a message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <label>
+            <input className="submit-button" type="submit" value="Submit" />
+          </label>
+        </form>
+      ) : (
+        <div className="notification-wrapper">
+          <div className="email-plane"></div>
+          <div className="email-notification">
+            Thank you for your message! I will respond to you shortly.
+          </div>
+        </div>
+      )}
     </div>
   );
 };

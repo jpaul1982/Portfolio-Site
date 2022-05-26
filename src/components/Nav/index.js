@@ -1,39 +1,31 @@
 import React from "react";
 import "./index.scss";
-import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+import { ReactComponent as Logo } from "../../assets/images/logo_white.svg";
 import { NavLink } from "react-router-dom";
-import {animateScroll as scroll } from 'react-scroll';
-
+import { Link } from "react-scroll";
 
 const Nav = () => {
-  // const links = document.querySelectorAll(".nav-link");
-
-  // links.forEach((i,link) => {
-  //   console.log(i,link);
-  // });
-
-  const toggleContact = () => {
-    scroll.scrollToBottom();
-  }
 
   return (
     <nav>
       <div className="nav-bar">
-        <NavLink to="/">
-          <Logo />
-        </NavLink>
-        <div className="nav-links">
-          <ul>
-            <NavLink className="nav-link" to="/about">
-              About
-            </NavLink>
-            <NavLink className="nav-link" to="/work">
-              Work
-            </NavLink>
-            <div className="nav-link" onClick={toggleContact}>
-              Contact
-            </div>
-          </ul>
+        <div className="nav-bar__inner">
+          <NavLink to="/">
+            <Logo />
+          </NavLink>
+          <div className="nav-links">
+            <ul>
+              <Link className="nav-link" to="about" spy={true} smooth={true} duration={500}>
+                About
+              </Link>
+              <Link className="nav-link" to="work" spy={true} smooth={true} duration={500}>
+                Work
+              </Link>
+              <Link className="nav-link" to="contact" spy={true} smooth={true} duration={500}>
+                Contact
+              </Link>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
