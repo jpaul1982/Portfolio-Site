@@ -1,7 +1,6 @@
 .contact-form {
   flex-basis: 39%;
   color: #ffffff;
-  overflow: hidden;
 
   .submit-button {
     max-width: 200px;
@@ -59,7 +58,7 @@
   font-size: 20px;
   animation-name: appear;
   animation-duration: 1s;
-  animation-delay: .75s;
+  animation-delay: 0.75s;
   opacity: 0;
   animation-fill-mode: forwards;
 }
@@ -90,7 +89,8 @@
 
   100% {
     top: -130px;
-    left: 650px;
+    left: 800px;
+    display: none;
   }
 }
 

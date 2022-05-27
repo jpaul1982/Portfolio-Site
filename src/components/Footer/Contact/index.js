@@ -33,10 +33,10 @@ const Contact = () => {
       {!isSubmitted ? (
         <form ref={form} onSubmit={sendEmail} action="">
           <label>
-            <input type="text" placeholder="Name" name="name" required />
+            <input type="text" placeholder="Name" name="name"  />
           </label>
           <label>
-            <input type="email" placeholder="Email" name="email" required />
+            <input type="email" placeholder="Email" name="email"  />
           </label>
           <textarea
             name="message"
