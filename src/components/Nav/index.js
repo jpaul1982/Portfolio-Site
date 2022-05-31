@@ -35,6 +35,7 @@ const Nav = () => {
         },
         "navbar+=.5"
       );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addToNavItems = (el) => {
