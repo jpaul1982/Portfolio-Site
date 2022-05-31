@@ -17,6 +17,7 @@ import BioPic from "../../../assets/images/paul_green.png";
 import "./index.scss";
 
 const IconGrid = () => {
+
   const icons = [
     { img: WP, color: "#01579B" },
     { img: HTML, color: "#E44D26" },
@@ -33,8 +34,8 @@ const IconGrid = () => {
   ];
   return (
     <>
-      <p style={{ paddingBottom: "2rem" }}>
-        Here are some technologies I like to work with:
+      <p style={{ paddingBottom: "2rem", fontWeight: "bold", fontSize:"25px"}}>
+        Technologies I like to work with:
       </p>
       <div className="flex-grid flex-grid--icons">
         <div className="icon-grid">
