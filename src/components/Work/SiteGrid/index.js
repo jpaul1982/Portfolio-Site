@@ -1,78 +1,47 @@
-import React from "react";
-import SiteItem from "./SiteItem";
+import React, { useRef, useEffect } from "react";
+import "./index.scss";
+import works from "./works.js";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// assets
-import AerospaceLogo from "../../../assets/images/aerospace_logo.png";
-import MalmborgsLogo from "../../../assets/images/malmborgs_logo.png";
-import GeminiLogo from "../../../assets/images/gemini.png";
-import ApplewoodLogo from "../../../assets/images/Applewood-logo.png";
-import KeyPolLogo from "../../../assets/images/key_polymer_logo.png";
-import KoKLogo from "../../../assets/images/KofKLogo.png";
-import UnichemLogo from "../../../assets/images/unichem.png";
-import ZubieLogo from "../../../assets/images/zubie.png";
+gsap.registerPlugin(ScrollTrigger);
 
 const SiteGrid = () => {
-  let works = [
-    {
-      companyName: "Malmborgs",
-      background: "#102E24",
-      logo: MalmborgsLogo,
-      url: "https://malmborgsinc.com/",
-    },
-    {
-      companyName: "Aerospace Fabrication",
-      background: "#00A38A",
-      logo: AerospaceLogo,
-      url: "https://aerospacefab.com/",
-    },
-    {
-      companyName: "GeminiAMS",
-      background: "#19325A",
-      logo: GeminiLogo,
-      url: "https://geminiams.com/",
-    },
-    {
-      background: "#F15D22",
-      logo: ApplewoodLogo,
-      url: "https://www.applewoodfixit.com/",
-    },
-    {
-      companyName: "Keyl Polymer",
-      background: "#16425B",
-      logo: KeyPolLogo,
-      url: "https://www.keypolymer.com/",
-    },
-    {
-      background: "#00467F",
-      logo: KoKLogo,
-      url: "https://www.kingofkingswoodbury.org/",
-    },
-    {
-      companyName: "Unichem",
-      background: "#3653A3",
-      logo: UnichemLogo,
-      url: "https://www.unichem.com/",
-    },
-    {
-      companyName: "Zubie",
-      background: "#00C2DF",
-      logo: ZubieLogo,
-      url: "https://zubie.com/",
-    },
-  ];
-
-  const makeKeys = () => {
-    let i = 0;
-    works.forEach((work) => {
-      work.id = i;
-      i++;
+  const sites = useRef([]);
+  sites.current = [];
+  useEffect(() => {
+    gsap.to(sites.current, {
+      opacity: 1,
+      stagger: {
+        each: 0.1,
+      },
+      ease: "power4.out",
+      duration: 0.35,
+      scrollTrigger: {
+        trigger: ".site-grid",
+        start: "top center+=100",
+      },
     });
+  }, []);
+
+  const addToSitessArr = (el) => {
+    if (el && !sites.current.includes(el)) {
+      sites.current.push(el);
+    }
   };
-  makeKeys();
   return (
-    <div style={{paddingTop: '5rem'}} className="flex-grid">
-      {works.map((work, i) => (
-        <SiteItem key={i} work={work} />
+    <div style={{ paddingTop: "5rem" }} className="flex-grid site-grid">
+      {works.map((work) => (
+        <div
+          ref={addToSitessArr}
+          key={work.companyName}
+          style={{ backgroundColor: `${work.background}` }}
+          className="flex-item--site"
+        >
+          <a href={work.url} target="_blank" rel="noreferrer">
+            <img src={work.logo} alt={work.companyName + " logo"} />
+          </a>
+        </div>
       ))}
     </div>
   );

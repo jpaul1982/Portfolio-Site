@@ -124,3 +124,18 @@ small,
   display: flex;
   flex-wrap: wrap;
 }
+
+.work-section, .about-section {
+  h2, p {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+}
+
+.grid-header {
+  font: normal bold 25px/1.5em "Avenir", sans-serif;
+  padding-bottom: "2rem";
+  opacity: 0;
+  transform: translateY(100px);
+  display: inline-block;
+}

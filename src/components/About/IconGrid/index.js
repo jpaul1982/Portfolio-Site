@@ -1,49 +1,77 @@
-import React from "react";
-import GridItem from "./GridItem";
-import XD from "../../../assets/images/adobe-xd.png";
-import PS from "../../../assets/images/adobe-photoshop.png";
-import AI from "../../../assets/images/adobe-illustrator.png";
-import CSS from "../../../assets/images/css.png";
-import GSAP from "../../../assets/images/gsap.png";
-import GULP from "../../../assets/images/gulp.png";
-import HTML from "../../../assets/images/html.png";
-import JS from "../../../assets/images/javascript.png";
-import NODE from "../../../assets/images/nodejs.png";
-import REACT from "../../../assets/images/react.png";
-import WP from "../../../assets/images/wordpress.png";
-import PHP from "../../../assets/images/php.png";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import iconList from "./icons.js";
 import BioPic from "../../../assets/images/paul_green.png";
-
 import "./index.scss";
+gsap.registerPlugin(ScrollTrigger);
 
 const IconGrid = () => {
+  const icons = useRef([]);
+  icons.current = [];
+  const iconsHeader = useRef(null);
+  const selfie = useRef(null);
 
-  const icons = [
-    { img: WP, color: "#01579B" },
-    { img: HTML, color: "#E44D26" },
-    { img: CSS, color: "#264DE4" },
-    { img: PHP, color: "#6181B6" },
-    { img: JS, color: "#F7DF1E" },
-    { img: GSAP, color: "#8AC640" },
-    { img: GULP, color: "#D34A47" },
-    { img: XD, color: "#2E001E" },
-    { img: PS, color: "#31C5F0" },
-    { img: AI, color: "#FF7F18" },
-    { img: NODE, color: "#83CD29" },
-    { img: REACT, color: "#61DBFB" },
-  ];
+  useEffect(() => {
+    gsap.to(iconsHeader.current, {
+      opacity: 1,
+      y: 0,
+      ease: "power4.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".icon-grid",
+        start: "top center+=200",
+      },
+    });
+    gsap.to(icons.current, {
+      opacity: 1,
+      y: 0,
+      stagger: {
+        each: 0.15,
+      },
+      ease: "power4.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".icon-grid",
+        start: "top center+=100",
+      },
+    });
+    gsap.to(selfie.current, {
+      x: 0,
+      ease: "power4.out",
+      duration: 1,
+      delay: 0.75,
+      scrollTrigger: {
+        trigger: ".icon-grid",
+        start: "top center+=100",
+      },
+    });
+  }, []);
+
+  const addToIconsArr = (el) => {
+    if (el && !icons.current.includes(el)) {
+      icons.current.push(el);
+    }
+  };
   return (
     <>
-      <p style={{ paddingBottom: "2rem", fontWeight: "bold", fontSize:"25px"}}>
+      <span ref={iconsHeader} className="grid-header">
         Technologies I like to work with:
-      </p>
+      </span>
       <div className="flex-grid flex-grid--icons">
         <div className="icon-grid">
-          {icons.map((icon, idX) => (
-            <GridItem key={idX} icon={icon} />
+          {iconList.map((icon, idX) => (
+            <div
+              ref={addToIconsArr}
+              style={{ "--color": `${icon.color}` }}
+              className="flex-item--icon"
+              key={idX}
+            >
+              <img src={icon.img} alt="" />
+            </div>
           ))}
         </div>
-        <div className="image-container">
+        <div ref={selfie} className="image-container">
           <img src={BioPic} alt="" />
         </div>
       </div>
