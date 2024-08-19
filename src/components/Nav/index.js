@@ -11,7 +11,7 @@ const Nav = () => {
   navItems.current = [];
 
   const navTl = gsap.timeline({
-    defaults: { ease: "power4.out", duration: 1, delay: 1.5 },
+    defaults: { ease: "power4.out", duration: .25, delay: 0 },
   });
 
   useEffect(() => {

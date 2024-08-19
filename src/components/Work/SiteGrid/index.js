@@ -32,16 +32,14 @@ const SiteGrid = () => {
   return (
     <div style={{ paddingTop: "5rem" }} className="flex-grid site-grid">
       {works.map((work) => (
-        <div
+        <a href={work.url} target="_blank" rel="noreferrer"
           ref={addToSitessArr}
           key={work.companyName}
           style={{ backgroundColor: `${work.background}` }}
           className="flex-item--site"
         >
-          <a href={work.url} target="_blank" rel="noreferrer">
-            <img src={work.logo} alt={work.companyName + " logo"} />
-          </a>
-        </div>
+          <img src={work.logo} alt={work.companyName + " logo"} />
+        </a>
       ))}
     </div>
   );

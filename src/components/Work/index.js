@@ -47,13 +47,8 @@ const Work = () => {
       <div className="container">
         <h2 ref={workHeader}>Work</h2>
         <p ref={workCopy}>
-          I've had my hand in various projects over the years. Sometimes it was
-          simply adding new features to an existing site, and other times it was
-          a complete design and build from the ground up.
+          I've had my hand in various projects over the years.  Click an icon to see the live site.
         </p>
-        <span class="grid-header" ref={workSubheader}>
-          Click an icon to see the live site.
-        </span>
       </div>
       <SiteGrid />
     </section>
