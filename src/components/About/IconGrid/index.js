@@ -72,7 +72,7 @@ const IconGrid = () => {
           ))}
         </div>
         <div ref={selfie} className="image-container">
-          <img src={BioPic} alt="" />
+          <img src={BioPic} alt="selfie of paul" />
         </div>
       </div>
     </>
