@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import iconList from "./icons.js";
-import BioPic from "../../../assets/images/paul_git green.png";
+import BioPic from "../../../assets/images/paul_green.png";
 import "./index.scss";
 gsap.registerPlugin(ScrollTrigger);
 
