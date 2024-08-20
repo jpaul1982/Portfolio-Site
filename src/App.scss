@@ -88,11 +88,13 @@ small,
   max-width: 1366px;
   width: 85%;
   margin: 0 auto;
+  overflow: hidden;
 
   &--hero {
     width: 100%;
     margin: 0;
     padding: 5rem 6% 0;
+    overflow: visible;
 
     @media (min-width: 500px) {
       width: 85%;
@@ -122,7 +124,10 @@ small,
 
 .flex-grid {
   display: flex;
-  flex-wrap: wrap;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .work-section, .about-section {

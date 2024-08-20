@@ -30,7 +30,7 @@ const SiteGrid = () => {
     }
   };
   return (
-    <div style={{ paddingTop: "5rem" }} className="flex-grid site-grid">
+    <div style={{ paddingTop: "5rem" }} className="flex-grid flex-grid--wrap site-grid">
       {works.map((work) => (
         <a href={work.url} target="_blank" rel="noreferrer"
           ref={addToSitessArr}

@@ -1,6 +1,6 @@
 .flex-item--site {
   width: 50%;
-  min-height: 275px;
+  min-height: 200px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -11,6 +11,7 @@
   @media (min-width: 768px) {
   width: 25%;
     transition: all 0.3s ease-in-out;
+    min-height: 275px;
   }
 
   &::after {
