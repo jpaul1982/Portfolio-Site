@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import iconList from "./icons.js";
-import BioPic from "../../../assets/images/paul.jpg";
+import BioPic from "../../../assets/images/paul_git green.png";
 import "./index.scss";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,7 +72,7 @@ const IconGrid = () => {
           ))}
         </div>
         <div ref={selfie} className="image-container">
-          <img src={BioPic} alt="selfie of paul" />
+          <img src={BioPic} alt="" />
         </div>
       </div>
     </>
