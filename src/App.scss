@@ -94,12 +94,13 @@ small,
     width: 100%;
     margin: 0;
     padding: 5rem 6% 0;
-    overflow: visible;
+    overflow: hidden;
 
     @media (min-width: 500px) {
       width: 85%;
       margin: 0 auto;
       padding: 0;
+      overflow: visible;
     }
   }
 }
