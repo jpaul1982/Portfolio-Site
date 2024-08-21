@@ -8,6 +8,7 @@
   --rotate: 45deg;
   --left: 100%;
   --opacity: 0;
+  overflow: hidden;
 
   @media (min-width: 500px) {
     height: 100vh;
