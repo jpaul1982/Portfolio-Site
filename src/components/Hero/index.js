@@ -47,9 +47,9 @@ const Hero = () => {
           <h1 className="hero--header" ref={header}>
             Paul Molnar
           </h1>
-          <h4 className="hero--sub-header" ref={subHeader}>
-            Web Design and Development
-          </h4>
+          <h3 className="hero--sub-header" ref={subHeader}>
+            Website Services
+          </h3>
         </div>
       </div>
     </>

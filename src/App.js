@@ -15,8 +15,8 @@ function App() {
     <Pointer/>
       <Nav />
       <Hero />
-      <About />
       <Work />
+      <About />
       <Footer />
     </>
   );

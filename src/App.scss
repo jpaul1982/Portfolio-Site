@@ -57,26 +57,34 @@ p {
 
 h1,
 h2,
-h3,
-h4,
 h5 {
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 2rem;
+  font-family: "Bebas Neue Bold", sans-serif;
   font-weight: 700;
 }
 
 h2 {
   font-size: 60px;
-  line-height: 1.2em;
-  margin-bottom: 2rem;
+  line-height: 1;
 
   @media (min-width: 500px) {
     font-size: 100px;
   }
 }
 
-h4 {
+h3 {
+  color: var(--color-primary);
   font-size: 50px;
+  font-family: "Bebas Neue Thin", sans-serif;
+  line-height: 1.2em;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-size: 35px;
+  color: var(--color-primary);
+  font-family: "Bebas Neue Thin", sans-serif;
+  line-height: 1.2em;
+  letter-spacing: 5px;
 }
 
 small,
@@ -132,7 +140,7 @@ small,
 }
 
 .work-section, .about-section {
-  h2, p {
+  h2, h4, p {
       transform: translateY(100px);
       opacity: 0;
   }

@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import SiteGrid from "./SiteGrid";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./index.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,8 +47,10 @@ const Work = () => {
     <section id="work" className="work-section">
       <div className="container">
         <h2 ref={workHeader}>Work</h2>
+        <h4 ref={workSubheader}>Project History</h4>
         <p ref={workCopy}>
-          I've had my hand in various projects over the years.  Click an icon to see the live site.
+          I've worked on various projects over the years.
+          Click a logo to see the live site.
         </p>
       </div>
       <SiteGrid />

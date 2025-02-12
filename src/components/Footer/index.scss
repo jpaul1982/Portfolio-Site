@@ -1,6 +1,5 @@
 .footer {
   background-color: var(--color-black);
-  padding-bottom: 5rem;
 
   &__wrapper {
     display: flex;
@@ -17,6 +16,23 @@
     color: var(--color-white);
     flex-basis: 55%;
     position: relative;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+      max-width: 355px;
+    }
+    .phone-link {
+      font-size: 20px;
+      color: var(--color-primary);
+      margin: 35px 0 15px;
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      font-family: "Bebas Neue Bold", sans-serif;
+    }
   }
 }
 
@@ -33,15 +49,12 @@
       text-decoration: none;
       margin-right: 1.5rem;
       color: #171718ff;
+
+      svg {
+        width: 23px;
+        height: 23px;
+      }
     }
   }
 }
 
-.phone-link {
-  text-decoration: none;
-  color:var(--color-white);
-  font-weight: 700;
-  display: block;
-  margin-bottom: 2rem;
-  font-family: "Avenir";
-}
