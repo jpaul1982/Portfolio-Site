@@ -18,6 +18,7 @@ import GreatlawnsLogo from "../../../assets/images/great-lawns.svg"
 import SwanLogo from "../../../assets/images/swan.png"
 import LLLogo from "../../../assets/images/LLeigh.svg"
 import DDLogo from "../../../assets/images/ddlogo.png"
+import FairwayLogo from "../../../assets/images/fairwaysvg.svg"
 
 let works = [
   {
@@ -31,6 +32,12 @@ let works = [
     background: "#073452",
     logo: LLLogo,
     url: "https://leisureleightravel.com/",
+  },
+    {
+    companyName: "Fairway Lawns",
+    background: "#017840",
+    logo: FairwayLogo,
+    url: "https://fairwaylawns.com/",
   },
   {
     companyName: "Wired Human",
