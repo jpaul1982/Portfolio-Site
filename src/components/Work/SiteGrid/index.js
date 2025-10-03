@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SiteGrid = () => {
+      ScrollTrigger.saveStyles(".flex-item--site");
   const sites = useRef([]);
   sites.current = [];
   useEffect(() => {
@@ -17,6 +18,7 @@ const SiteGrid = () => {
       },
       ease: "power4.out",
       duration: 0.35,
+      clearProps: "transform",
       scrollTrigger: {
         trigger: ".site-grid",
         start: "top center+=100",
@@ -35,9 +37,10 @@ const SiteGrid = () => {
         <a href={work.url} target="_blank" rel="noreferrer"
           ref={addToSitessArr}
           key={work.companyName}
-          style={{ backgroundColor: `${work.background}` }}
           className="flex-item--site"
+          data-bg-color={work.background}
         >
+          <div  style={{ backgroundColor: `${work.background}` }} className="flex-item--bg"></div>
           <img src={work.logo} alt={work.companyName + " logo"} />
         </a>
       ))}
